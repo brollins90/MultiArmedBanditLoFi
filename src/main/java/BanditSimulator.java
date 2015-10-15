@@ -4,7 +4,7 @@ import java.util.Random;
 /**
  * Created by brollins on 10/15/2015.
  */
-public class BanditSimulator {
+public class BanditSimulator implements Simulator {
 
     Bandit[] bandits;
     int numBandits;
@@ -26,14 +26,7 @@ public class BanditSimulator {
             bandits[i] = new Bandit(random);
         }
     }
-
-    /**
-     * pulls the chosen bandit.  If you win (the random number is less than the bandit's value) returns a 1, otherwise
-     * returns a 0.
-     *
-     * @param bandit the bandit to pull
-     * @return a 1 if you win, otherwise a 0
-     */
+    
     public int pull(int bandit) {
 
         if (bandit < 0 || bandit > numBandits - 1)
