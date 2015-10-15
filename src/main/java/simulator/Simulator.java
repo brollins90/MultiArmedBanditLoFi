@@ -1,7 +1,15 @@
+package simulator;
+
 /**
  * Created by brollins on 10/15/2015.
  */
 public interface Simulator {
+
+    /**
+     * Returns the number of choices.
+     * @return the number of choices
+     */
+    int getNumberOfChoices();
 
     /**
      * pulls the chosen bandit.  If you win (the random number is less than the bandit's value) returns a 1, otherwise

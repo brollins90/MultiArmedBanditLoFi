@@ -1,4 +1,7 @@
-import java.util.Arrays;
+package bandit;
+
+import simulator.Simulator;
+
 import java.util.Random;
 
 /**
@@ -27,6 +30,10 @@ public class BanditSimulator implements Simulator {
         }
     }
 
+    public int getNumberOfChoices() {
+        return numBandits;
+    }
+
     public int pull(int bandit) {
 
         if (bandit < 0 || bandit > numBandits - 1)
@@ -37,7 +44,7 @@ public class BanditSimulator implements Simulator {
 
     @Override
     public String toString() {
-        String returnString = "BanditSimulator{ bandits = [ ";
+        String returnString = "bandit.BanditSimulator{ bandits = [ ";
         for (Bandit bandit : bandits) {
             returnString += bandit.toString() + ", ";
         }

@@ -1,3 +1,5 @@
+package bandit;
+
 import java.util.Random;
 
 /**
@@ -46,7 +48,7 @@ public class Bandit {
 
     @Override
     public String toString() {
-        return "Bandit{" +
+        return "bandit.Bandit{" +
                 "pullCount=" + pullCount +
                 ", winCount=" + winCount +
                 ", winProbability=" + winProbability +
