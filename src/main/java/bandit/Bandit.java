@@ -34,6 +34,7 @@ public class Bandit {
 
     /**
      * Pulls the bandit and increases the statistics.
+     *
      * @return returns true if you won (the random value is less than the win probability), otherwise false
      */
     public boolean pull() {

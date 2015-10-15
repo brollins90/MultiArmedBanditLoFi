@@ -1,7 +1,4 @@
-package bandit;
-
-import simulator.Puller;
-import simulator.Simulator;
+package simulator;
 
 import java.util.Random;
 
@@ -16,7 +13,7 @@ public class RandomPuller implements Puller {
     public RandomPuller(Simulator simulator) {
         this(simulator, new Random());
     }
-    
+
     public RandomPuller(Simulator simulator, Random random) {
         this.simulator = simulator;
         this.random = random;

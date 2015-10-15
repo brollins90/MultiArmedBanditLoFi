@@ -1,5 +1,5 @@
 import bandit.BanditSimulator;
-import bandit.RandomPuller;
+import simulator.ConsolePuller;
 import simulator.Puller;
 import simulator.Simulator;
 
@@ -8,10 +8,10 @@ import simulator.Simulator;
  */
 public class Main {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         Simulator simulator = new BanditSimulator(3);
-        Puller puller = new RandomPuller(simulator);
+        Puller puller = new ConsolePuller(simulator);
 
         puller.pull(5);
 

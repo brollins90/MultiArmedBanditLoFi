@@ -7,6 +7,7 @@ public interface Simulator {
 
     /**
      * Returns the number of choices.
+     *
      * @return the number of choices
      */
     int getNumberOfChoices();
