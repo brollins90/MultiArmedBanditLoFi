@@ -26,7 +26,7 @@ public class BanditSimulator implements Simulator {
             bandits[i] = new Bandit(random);
         }
     }
-    
+
     public int pull(int bandit) {
 
         if (bandit < 0 || bandit > numBandits - 1)
