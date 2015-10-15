@@ -5,5 +5,9 @@ public class Main {
 
     public static void main (String[] args) {
 
+        BanditSimulator simulator = new BanditSimulator(3);
+        System.out.println(simulator.pull(1));
+
+        System.out.println(simulator);
     }
 }
