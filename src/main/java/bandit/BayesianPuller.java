@@ -55,6 +55,16 @@ public class BayesianPuller implements Puller {
         exploring = true;
     }
 
+    private void decreaseRating(int choice) {
+
+        rating[choice] = (rating[choice] > 1) ? rating[choice]-- : 1;
+    }
+
+    private void increaseRating(int choice) {
+
+        rating[choice]++;
+    }
+
     private int getExploreChoice() {
 
         int choice = 0;
@@ -107,7 +117,9 @@ public class BayesianPuller implements Puller {
             if (result == 1) {
 
                 wins[choice]++;
-                rating[choice]++;
+                increaseRating(choice);
+            } else {
+                decreaseRating(choice);
             }
         }
     }
